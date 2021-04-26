@@ -7,3 +7,8 @@ body
 {
   shadow: 100%;
 }
+
+#user-question
+{
+  color: red;
+}
