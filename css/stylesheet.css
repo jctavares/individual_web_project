@@ -7,9 +7,3 @@ question-card
 {
   shadow: 100%;
 }
-
-#user-question
-{
-  font-color: red;
-  font-family: monospace;
-}
