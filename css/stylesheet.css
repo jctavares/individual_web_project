@@ -3,12 +3,12 @@ body
   height: 100%;
 }
 
-#question-card
+question-card
 {
   shadow: 100%;
 }
 
-#user-question
+user-question
 {
   color: red;
 }
