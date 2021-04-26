@@ -10,10 +10,6 @@ question-card
 
 #user-question
 {
-  color: red;
-}
-
-#font-change
-{
+  font-color: red;
   font-family: monospace;
 }
