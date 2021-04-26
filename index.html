@@ -9,13 +9,15 @@
 </head>
 <script>
   $(document).ready(function () {
-      $('div.fade').fadeIn(1000).removeClass('fade');
+      $('#fade').fadeIn(1000);
   });
 </script>
 
 <body>
 <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
-  <div class ="fade">
+  <div class="cont" #id="fade">
+    <p> texto porra </p>
+    </div>
   <div class="card">
     <h3 class="card-header">Vamos nos conhecer...</h3>
     <div class="card-body">
@@ -25,7 +27,6 @@
       <div class="card-footer">
         <a href="#" class="btn btn-primary">Próximo</a>
         </div>
-      </div>
       </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
