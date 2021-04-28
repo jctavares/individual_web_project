@@ -5,6 +5,7 @@
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
   <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
   <link rel="icon" href="assets/tab_icon.jpg">
+  <script type="text/javascript" src="script/script.js"></script>
   <title> Pesquisa sobre filmes</title>
   <style>
   .card {
@@ -20,7 +21,7 @@
   }
   </style>
 </head>
-<body>
+<body onload="myFunction()">
   <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
     <h1 class="test-h">Aqui estão suas respostas:</h1>
     <div class="card">
@@ -49,7 +50,7 @@
       </div>
       <div class="row">
         <div class="col-sm-12 text-center">
-          <div class="card-footer"
+          <div class="card-footer">
           <br>
           <a href="third_page.html" class="btn btn-warning">←</a>
           <a href="index.html" class="btn btn-warning" id="restartSurvey">Participar novamente</a>
@@ -63,14 +64,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 </body>
 <script>
-
-lsNameOutput = document.getElementById("lsNameOutput");
-
-body.onload = function () {
-  const userName = localStorage.getItem("nome");
-  lsNameOutput.innerHTML = `{userName}`;
-}
-
 restartSurvey.onclick = function () {
   return localStorage.clear();
 }
