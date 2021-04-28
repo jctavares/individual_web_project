@@ -19,7 +19,18 @@
     text-shadow: #FC0 1px 0 10px;
   }
   </style>
+
+  <script>
+
+  </script>
 </head>
+<script>
+function checkRadioBox() {
+  if (document.getElementsByName(comedia).checked) {
+    alert("foi porra!!")
+  }
+}
+</script>
 <body>
   <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
     <h1 class="test-h">Dentre esses gêneros de filme abaixo<br>qual o seu preferido?</h1><br>
@@ -28,56 +39,56 @@
       <ul class="list-group list-group-flush">
         <li class="list-group-item">
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="acao" checked>
-            <label class="form-check-label" for="exampleRadios1">Ação</label>
+            <input class="form-check-input" type="radio" name="acao" id="filme-acao" value="acao">
+            <label class="form-check-label" for="acao">Ação</label>
           </div>
         </li>
         <li class="list-group-item">
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="aventura">
-            <label class="form-check-label" for="exampleRadios1">Aventura</label>
+            <input class="form-check-input" type="radio" name="aventura" id="filme-aventura" value="aventura">
+            <label class="form-check-label" for="aventura">Aventura</label>
           </div>
         </li>
         <li class="list-group-item">
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="comedia">
-            <label class="form-check-label" for="exampleRadios1">Comédia</label>
+            <input class="form-check-input" type="radio" name="comedia" id="filme-comedia" value="comedia">
+            <label class="form-check-label" for="comedia">Comédia</label>
           </div>
         </li>
         <li class="list-group-item">
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="terror">
-            <label class="form-check-label" for="exampleRadios1">Terror</label>
+            <input class="form-check-input" type="radio" name="terror" id="filme-terror" value="terror">
+            <label class="form-check-label" for="terror">Terror</label>
           </div>
         </li>
         <li class="list-group-item">
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="suspense">
-            <label class="form-check-label" for="exampleRadios1">Suspense</label>
+            <input class="form-check-input" type="radio" name="suspense" id="filme-suspense" value="suspense">
+            <label class="form-check-label" for="suspense">Suspense</label>
           </div>
         </li>
         <li class="list-group-item">
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="drama">
-            <label class="form-check-label" for="exampleRadios1">Drama</label>
+            <input class="form-check-input" type="radio" name="drama" id="filme-drama" value="drama">
+            <label class="form-check-label" for="drama">Drama</label>
           </div>
         </li>
         <li class="list-group-item">
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="scifi">
-            <label class="form-check-label" for="exampleRadios1">Ficção Científica</label>
+            <input class="form-check-input" type="radio" name="scifi" id="filme-scifi" value="scifi">
+            <label class="form-check-label" for="scifi">Ficção Científica</label>
           </div>
         </li>
         <li class="list-group-item">
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="animacao">
-            <label class="form-check-label" for="exampleRadios1">Animação</label>
+            <input class="form-check-input" type="radio" name="animacao" id="filme-animacao" value="animacao">
+            <label class="form-check-label" for="animacao">Animação</label>
           </div>
         </li>
         <li class="list-group-item">
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="outro">
-            <label class="form-check-label" for="exampleRadios1">Outro</label>
+            <input class="form-check-input" type="radio" name="outro" id="filme-outro" value="outro">
+            <label class="form-check-label" for="outro">Outro</label>
           </div>
         </li>
       </ul>
@@ -86,8 +97,8 @@
       <div class="col-sm-12 text-center">
         <div class="card-footer"
         <br>
-        <a href="index.html" class="btn btn-warning">←</a>
-        <a href="construction_page.html" class="btn btn-warning">→</a>
+        <a href="../index.html" class="btn btn-warning">←</a>
+        <a href="third_page.html" class="btn btn-warning">→</a>
     </div>
       </div>
     </div>
