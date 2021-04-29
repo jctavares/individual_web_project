@@ -21,51 +21,43 @@
   }
   </style>
 </head>
-<body onload="loadUserAnswers()">
+<body onload="answers()">
   <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
     <h1 class="test-h">Aqui estão suas respostas:</h1>
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Nome</h5>
-        <p class="card-text">O seu nome é:</p>
-        <div id="lsNameOutput"></div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Gênero de filme</h5>
-          <p class="card-text">O seu gênero preferido de filme é asdjpfiop</p>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <p class="card-title"><b>O seu nome é:</b></p>
+            <div id="lsNameOutput"></div>
+          </li>
+          <li class="list-group-item">
+            <p class="card-text"><b>O seu gênero preferido de filme é:</b></p>
+            <div id="lsGenreOutput"></div>
+          </li>
+          <li class="list-group-item">
+            <p class="card-text"><b>O filme favorito do seu gênero favorito é:</b></p>
+            <div id="lsFavMovieOutput"></div>
+          </li>
+          <li class="list-group-item">
+            <p class="card-text"><b>Você consome através dos seguintes canais:</b></p>
+            <div id="lsMediaOutput"></div>
+          </li>
         </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Filme favorito do gênero</h5>
-          <p class="card-text">O filme favorito do seu gênero favorito é ako[doaksopfk]</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Consumo</h5>
-          <p class="card-text">Você consome através dos seguintes canais: aksopd</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-12 text-center">
-          <div class="card-footer">
-          <br>
-          <a href="third_page.html" class="btn btn-warning">←</a>
-          <a href="index.html" class="btn btn-warning" id="restartSurvey">Participar novamente</a>
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <div class="card-footer">
+              <a href="third_page.html" class="btn btn-warning">←</a>
+              <a href="index.html" class="btn btn-warning" id="restartSurvey" onclick="clearFields()">Participar novamente</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-</body>
-<script>
-restartSurvey.onclick = function () {
-  return localStorage.clear();
-}
-</script>
-</html>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </body>
+  <script>
+  </script>
+  </html>

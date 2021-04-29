@@ -5,6 +5,7 @@
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
   <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
   <link rel="icon" href="assets/tab_icon.jpg">
+  <script type="text/javascript" src="script/script.js"></script>
   <title> Pesquisa sobre filmes</title>
   <style>
   .card {
@@ -31,7 +32,7 @@
       </div>
       <div class="card-footer">
         <div class="d-flex justify-content-center">
-          <a href="second_page.html" class="btn btn-warning" id="btnInsert">→</a>
+          <a href="second_page.html" class="btn btn-warning" id="btnInsert" onclick="storeUsername()">→</a>
         </div>
       </div>
     </div>
@@ -41,13 +42,6 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 </body>
 <script>
-  const inpKey = document.getElementById("inputValue");
-  const btnInsert = document.getElementById("btnInsert");
-  btnInsert.onclick = function () {
-    const value = inputValue.value;
-    if (value) {
-      localStorage.setItem("nome", value);
-    }
-  }
+
 </script>
 </html>
