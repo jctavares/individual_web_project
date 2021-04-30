@@ -21,26 +21,26 @@
   }
   </style>
 </head>
-<body onload="clearCheckbox()">
+<body onload="loadCboxPreferences()">
   <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
     <h1 class="test-h">Através de quais canais você <br>consome esse tipo de mídia?</h1>
     <div class="card">
       <div class="card" style="width: 28rem;">
         <form action="action_page.php">
           <li class="list-group-item">
-            <input type="checkbox" id="midia-fisica" name="checks" value="Mídia Física" onchange=""="storeCheckbox()">
+            <input type="checkbox" id="midia-fisica" name="checks" value="Mídia Física">
             <label for="midia-fisica">Mídias Físicas (CD, DVD, Blu-Ray)</label><br>
           </li>
           <li class="list-group-item">
-            <input type="checkbox" id="midia-digital" name="checks" value="Mídia Digital" onchange="storeCheckbox()">
+            <input type="checkbox" id="midia-digital" name="checks" value="Mídia Digital">
             <label for="midia-digital">Plataformas Digitais (Netflix, Amazon Prime, Disney+)</label><br>
           </li>
           <li class="list-group-item">
-            <input type="checkbox" id="metodos-ilegais" name="checks" value="Ilegalmente" onchange="storeCheckbox()">
+            <input type="checkbox" id="metodos-ilegais" name="checks" value="Ilegalmente">
             <label for="ilegal">Ilegais (Torrent)</label><br>
           </li>
           <li class="list-group-item">
-            <input type="checkbox" id="maneiras-misteriosas" name="checks" value="Outras maneiras" onchange="storeCheckbox()">
+            <input type="checkbox" id="maneiras-misteriosas" name="checks" value="Outras maneiras">
             <label for="outro-tipo">Outro</label><br>
           </li>
         </div>

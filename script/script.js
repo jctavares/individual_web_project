@@ -18,6 +18,29 @@ function answers() {
   loadLiking();
 }
 
+function preLoadName() {
+  var userName = document.getElementById("inputValue");
+  var userLiking = document.getElementById("inputAnswer");
+  const name = localStorage.getItem("nome");
+  const answer = localStorage.getItem("quanto_gosta");
+  if ("nome" in localStorage) {
+    inputValue.value = name;
+  }
+  if ("quanto_gosta" in localStorage) {
+    inputAnswer.value = answer;
+  }
+
+}
+
+
+function movieRec() {
+  inputAnswer = document.getElementById("inputValue");
+  const value = localStorage.getItem("filme_favorito");
+  if ("filme_favorito" in localStorage) {
+    inputAnswer.value = value;
+  }
+}
+
 function loadUserName() {
   const lsNameOutput = document.getElementById("lsNameOutput");
   const userName = localStorage.getItem("nome");
@@ -121,6 +144,86 @@ function storeUserFav() {
   localStorage.setItem("filme_favorito", value);
 }
 
+function loadCboxPreferences() {
+  var physical = document.getElementById("midia-fisica");
+  var digital = document.getElementById("midia-digital");
+  var ilegal = document.getElementById("metodos-ilegais");
+  var misterio = document.getElementById("maneiras-misteriosas");
+
+  if (localStorage.getItem(physical.id)) {
+    physical.checked = true;
+  }
+  if (localStorage.getItem(digital.id)) {
+    digital.checked = true;
+  }
+  if (localStorage.getItem(ilegal.id)) {
+    ilegal.checked = true;
+  }
+  if (localStorage.getItem(misterio.id)) {
+    misterio.checked = true;
+  }
+}
+
+function loadRadio() {
+  // professor me perdoe mas eu não consegui
+  // fazer isso funcionar de nenhum outro
+  // jeito não kkkkkkkk
+  var radios = document.getElementsByName("radios");
+  var genero = localStorage.getItem("genero");
+  var type1 = document.getElementById("type1");
+  const inpKey = document.getElementById("inputAnswer");
+  switch (genero) {
+    case "Ação":
+    type1.checked = true;
+    toggleVisible();
+    movieRec();
+    break;
+    case "Aventura":
+    type2.checked = true;
+    toggleVisible();
+    movieRec();
+    break;
+    case "Comédia":
+    type3.checked = true;
+    toggleVisible();
+    movieRec();
+    break;
+    case "Terror":
+    type4.checked = true;
+    toggleVisible();
+    movieRec();
+    break;
+    case "Suspense":
+    type5.checked = true;
+    toggleVisible();
+    movieRec();
+    break;
+    case "Drama":
+    type6.checked = true;
+    toggleVisible();
+    movieRec();
+    break;
+    case "Ficção":
+    type7.checked = true;
+    toggleVisible();
+    movieRec();
+    break;
+    case "Animação":
+    type8.checked = true;
+    toggleVisible();
+    movieRec();
+    break;
+    case "Outro":
+    type9.checked = true;
+    toggleVisible();
+    movieRec();
+    break;
+    defautl:
+    break;
+  }
+
+}
+
 
 function storeCheckbox() {
   // Antes de mais nada, eu sinto muito de verdade pelo brute-force
@@ -130,19 +233,34 @@ function storeCheckbox() {
   var digital = document.getElementById("midia-digital");
   var ilegal = document.getElementById("metodos-ilegais");
   var misterio = document.getElementById("maneiras-misteriosas");
+  // os outros tão ficando salvos
+  //todo: limpar histórico do navegador pra ver se resolve
+  // se não resolver, fazer o else pra apagar na marra
 
   if (physical.checked) {
     localStorage.setItem(physical.id,physical.value);
+  } else {
+    localStorage.removeItem(physical.id);
   }
+
   if (digital.checked) {
     localStorage.setItem(digital.id,digital.value);
+  } else {
+    localStorage.removeItem(digital.id);
   }
+
   if (ilegal.checked) {
     localStorage.setItem(ilegal.id,ilegal.value);
+  } else {
+    localStorage.removeItem(ilegal.id);
   }
+
   if (misterio.checked) {
     localStorage.setItem(misterio.id,misterio.value);
+  } else {
+    localStorage.removeItem(misterio.id);
   }
+
 }
 
 function clearCheckbox() {
