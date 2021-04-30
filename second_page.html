@@ -17,80 +17,78 @@
   }
   .test-h {
     color: white;
-    text-shadow: #FC0 1px 0 10px;
+    text-shadow: #000000 1px 0 10px;
   }
   </style>
 </head>
-<body>
+<body onload="hideQuestion()">
   <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
     <h1 class="test-h">Dentre esses gêneros de filme abaixo<br>qual o seu preferido?</h1><br>
-    <div class="card">
       <div class="card" style="width: 18rem;">
-        <ul class="list-group list-group-flush">
+        <ul class="list-group list-group-flush" onchange="toggleVisible();storeUserChoice();autoCompleteText()">
           <li class="list-group-item">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="radios" id="movieType" onclick="storeUserChoice()" value="ação">
+              <input class="form-check-input" type="radio" name="radios" id="type1" value="Ação">
               <label class="form-check-label" for="acao">Ação</label>
             </div>
           </li>
           <li class="list-group-item">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="radios" id="movieType" value="aventura">
+              <input class="form-check-input" type="radio" name="radios" id="type2" value="Aventura">
               <label class="form-check-label" for="aventura">Aventura</label>
             </div>
           </li>
           <li class="list-group-item">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="radios" id="movieType" value="comédia">
+              <input class="form-check-input" type="radio" name="radios" id="type3" value="Comédia">
               <label class="form-check-label" for="comedia">Comédia</label>
             </div>
           </li>
           <li class="list-group-item">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="radios" id="movieType" value="terror">
+              <input class="form-check-input" type="radio" name="radios" id="type4" value="Terror">
               <label class="form-check-label" for="terror">Terror</label>
             </div>
           </li>
           <li class="list-group-item">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="radios" id="movieType" value="suspense">
+              <input class="form-check-input" type="radio" name="radios" id="type5" value="Suspense">
               <label class="form-check-label" for="suspense">Suspense</label>
             </div>
           </li>
           <li class="list-group-item">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="radios" id="movieType" value="drama">
+              <input class="form-check-input" type="radio" name="radios" id="type6" value="Drama">
               <label class="form-check-label" for="drama">Drama</label>
             </div>
           </li>
           <li class="list-group-item">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="radios" id="movieType" value="ficção">
+              <input class="form-check-input" type="radio" name="radios" id="type7" value="Ficção">
               <label class="form-check-label" for="scifi">Ficção Científica</label>
             </div>
           </li>
           <li class="list-group-item">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="radios" id="movieType" value="animação">
+              <input class="form-check-input" type="radio" name="radios" id="type8" value="Animação">
               <label class="form-check-label" for="animacao">Animação</label>
             </div>
           </li>
           <li class="list-group-item">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="outro" id="filme-outro" value="outro">
+              <input class="form-check-input" type="radio" name="radios" id="type9" value="Outro">
               <label class="form-check-label" for="outro">Outro</label>
             </div>
           </li>
         </ul>
       </div>
-    </div>
-    <br>
-
-    <h1 class="test-h" id="autoComplete">Sobre filmes de</h1>
-    <div class="card">
+      <br>
+    <h1 class="test-h" id="autoComplete" onshow="autoCompleteText()"></h1>
+    <div class="invisible" id="hiddenQuestion">
+    <div class="card" style="width: 18rem;">
       <div class="card-body">
-        <p class="card-text">Tem algum título que você está <br>ansioso para assistir?</p>
-        <input type="text" id="inputValue" placeholder="Insira aqui"><br>
+        <p class="card-text"></p>
+        <input type="text" id="inputValue" placeholder="Só um serve =)"><br>
       </div>
       <div class="row">
         <div class="col-sm-12 text-center">
@@ -99,13 +97,11 @@
           <a href="index.html" class="btn btn-warning">←</a>
           <a href="third_page.html" class="btn btn-warning" onclick="storeUserFav()">→</a>
         </div>
+        </div>
       </div>
     </div>
+    <br>
   </div>
-</div>
-</div>
-</div>
-</div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>

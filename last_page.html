@@ -5,7 +5,7 @@
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
   <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
   <link rel="icon" href="assets/tab_icon.jpg">
-  <script type="text/javascript" src="script/script.js"></script>
+  <script type="text/javascript" defer src="script/script.js"></script>
   <title> Pesquisa sobre filmes</title>
   <style>
   .card {
@@ -17,7 +17,7 @@
   }
   .test-h {
     color: white;
-    text-shadow: #FC0 1px 0 10px;
+    text-shadow: #000000 1px 0 10px;
   }
   </style>
 </head>
@@ -32,11 +32,15 @@
             <div id="lsNameOutput"></div>
           </li>
           <li class="list-group-item">
+            <p class="card-title"><b>O quanto você gosta de ver filmes:</b></p>
+            <div id="lsLikingOutput"></div>
+          </li>
+          <li class="list-group-item">
             <p class="card-text"><b>O seu gênero preferido de filme é:</b></p>
             <div id="lsGenreOutput"></div>
           </li>
           <li class="list-group-item">
-            <p class="card-text"><b>O filme favorito do seu gênero favorito é:</b></p>
+            <p class="card-text"><b>Sua recomendação de filme é:</b></p>
             <div id="lsFavMovieOutput"></div>
           </li>
           <li class="list-group-item">

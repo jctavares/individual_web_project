@@ -17,30 +17,30 @@
   }
   .test-h {
     color: white;
-    text-shadow: #FC0 1px 0 10px;
+    text-shadow: #000000 1px 0 10px;
   }
   </style>
 </head>
-<body>
+<body onload="clearCheckbox()">
   <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
-    <h1 class="test-h">Através de quais canais você consome esse tipo de mídia?</h1>
+    <h1 class="test-h">Através de quais canais você <br>consome esse tipo de mídia?</h1>
     <div class="card">
-      <div class="card" style="width: 30rem;">
-        <fom action="action_page.php">
+      <div class="card" style="width: 28rem;">
+        <form action="action_page.php">
           <li class="list-group-item">
-            <input type="checkbox" id="midia-fisica" name="fisico" value="fisico">
+            <input type="checkbox" id="midia-fisica" name="checks" value="Mídia Física" onchange=""="storeCheckbox()">
             <label for="midia-fisica">Mídias Físicas (CD, DVD, Blu-Ray)</label><br>
           </li>
           <li class="list-group-item">
-            <input type="checkbox" id="midia-digital" name="digital" value="digital">
+            <input type="checkbox" id="midia-digital" name="checks" value="Mídia Digital" onchange="storeCheckbox()">
             <label for="midia-digital">Plataformas Digitais (Netflix, Amazon Prime, Disney+)</label><br>
           </li>
           <li class="list-group-item">
-            <input type="checkbox" id="ilegal" name="ilegal" value="ilegal">
-            <label for="ilegal">Torrent</label><br>
+            <input type="checkbox" id="metodos-ilegais" name="checks" value="Ilegalmente" onchange="storeCheckbox()">
+            <label for="ilegal">Ilegais (Torrent)</label><br>
           </li>
           <li class="list-group-item">
-            <input type="checkbox" id="outro-tipo" name="outro-tipo" value="outro-tipo">
+            <input type="checkbox" id="maneiras-misteriosas" name="checks" value="Outras maneiras" onchange="storeCheckbox()">
             <label for="outro-tipo">Outro</label><br>
           </li>
         </div>
@@ -49,8 +49,8 @@
         <div class="col-sm-12 text-center">
           <div class="card-footer"
           <br>
-          <a href="second_page.html" class="btn btn-warning">←</a>
-          <a href="last_page.html" class="btn btn-warning">→</a>
+          <a href="second_page.html" class="btn btn-warning"> ← </a>
+          <a href="last_page.html" class="btn btn-warning" onclick="storeCheckbox()">Finalizar</a>
         </div>
       </div>
     </div>
