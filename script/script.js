@@ -83,7 +83,11 @@ function loadFavGenre() {
 function loadMediaPlataforms() {
   var lsMediaOutput = document.getElementById("lsMediaOutput");
   var plataform = localStorage.getItem("midia");
-  lsMediaOutput.innerHTML = plataform;
+  if (plataform) {
+    lsMediaOutput.innerHTML = plataform;
+  } else {
+    lsMediaOutput.innerHTML = Não indicada;
+  }
 }
 
 function storeUserChoice() {
