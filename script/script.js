@@ -67,7 +67,7 @@ function loadFavMovie() {
   if (favMovie) {
     lsFavMovieOutput.innerHTML = favMovie;
   } else {
-    lsFavMovieOutput.innerHTML = "Sem filme favorito";
+    lsFavMovieOutput.innerHTML = "Sem recomendação";
   }
 }
 
@@ -131,11 +131,41 @@ function storeUserChoice() {
 function autoCompleteText() {
   const autoComplete = document.getElementById("autoComplete");
   const movieGenre = localStorage.getItem("genero");
-  if (movieGenre == "Outro") {
-    autoComplete.innerHTML = "Desse gênero misterioso, <br>qual filme você me recomenda?";
-  } else {
-    autoComplete.innerHTML = "Qual a sua recomendação de <br>um filme de " + movieGenre + "?";
+  var completeText = "Tem algum filme pra me recomendar ";
+  var text = "";
+
+  switch (movieGenre) {
+    case "Outro":
+    text = "<br>desse gênero misterioso?"
+    break;
+    case "Ação":
+    text = "que<br>não seja Duro de Matar?";
+    break;
+    case "Aventura":
+    text = "<br> fora Indiana Jones?";
+    break;
+    case "Comédia":
+    text = "<br> além de Click? Já deu desse."
+    break;
+    case "Terror":
+    text = "?<br>Não que eu vá ver..."
+    break;
+    case "Suspense":
+    text = "além<br>de Paranoia? Muito bom por sinal :)"
+    break;
+    case "Drama":
+    text = "pra<br>que eu passe longe? Não curto drama..."
+    break;
+    case "Ficção":
+    text = "fora<br>Star Wars? Star Trek não conta."
+    break;
+    case "Animação":
+    text = "?<br>Mas que não seja Toy Story."
+    break;
+    default:
+    break;
   }
+  autoComplete.innerHTML = completeText + text;
 }
 
 function storeUserFav() {
