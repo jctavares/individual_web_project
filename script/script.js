@@ -86,7 +86,7 @@ function loadMediaPlataforms() {
   if (plataform) {
     lsMediaOutput.innerHTML = plataform;
   } else {
-    lsMediaOutput.innerHTML = Não indicada;
+    lsMediaOutput.innerHTML = "Não indicada";
   }
 }
 
