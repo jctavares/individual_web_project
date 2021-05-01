@@ -23,37 +23,30 @@
 </head>
 <body onload="loadCboxPreferences()">
   <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
-    <h1 class="test-h">Através de quais canais você <br>consome esse tipo de mídia?</h1>
+    <h1 class="test-h">Qual o canal principal pelo <br>qual você consome esse tipo de mídia?</h1>
     <div class="card">
       <div class="card" style="width: 28rem;">
-        <form action="action_page.php">
-          <li class="list-group-item">
-            <input type="checkbox" id="midia-fisica" name="checks" value="Mídia Física">
-            <label for="midia-fisica">Mídias Físicas (CD, DVD, Blu-Ray)</label><br>
-          </li>
-          <li class="list-group-item">
-            <input type="checkbox" id="midia-digital" name="checks" value="Mídia Digital">
-            <label for="midia-digital">Plataformas Digitais (Netflix, Amazon Prime, Disney+)</label><br>
-          </li>
-          <li class="list-group-item">
-            <input type="checkbox" id="metodos-ilegais" name="checks" value="Ilegalmente">
-            <label for="ilegal">Ilegais (Torrent)</label><br>
-          </li>
-          <li class="list-group-item">
-            <input type="checkbox" id="maneiras-misteriosas" name="checks" value="Outras maneiras">
-            <label for="outro-tipo">Outro</label><br>
-          </li>
-        </div>
-      </form>
+        <div class="card-body">
+        <select name="checkbox" onchange="storeCheckbox(this)">
+          <option disabled selected value> -- Escolha uma opção -- </option>
+          <option value="Mídia Física" id="midia">Mídia Física (CD, DVD, Blu-Ray)</option>
+          <option value="Mídia Digital" id="midia">Mídias Digitais (Netflix, Amazon Prime, Disney+)</option>
+          <option value="Ilegalmente" id="midia">Torrent</option>
+          <option value="Outras maneiras" id="midia">Outras maneiras</option>
+        </select>
+      </div>
       <div class="row">
         <div class="col-sm-12 text-center">
           <div class="card-footer"
           <br>
-          <a href="second_page.html" class="btn btn-warning" onclick="storeCheckbox()"> ← </a>
-          <a href="last_page.html" class="btn btn-warning" onclick="storeCheckbox()">Finalizar</a>
+          <a href="second_page.html" class="btn btn-warning">←</a>
+          <a href="last_page.html" class="btn btn-warning">Finalizar</a>
         </div>
       </div>
     </div>
+  </div>
+</div>
+</div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>

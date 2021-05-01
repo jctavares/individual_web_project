@@ -32,7 +32,6 @@ function preLoadName() {
 
 }
 
-
 function movieRec() {
   inputAnswer = document.getElementById("inputValue");
   const value = localStorage.getItem("filme_favorito");
@@ -82,6 +81,12 @@ function loadFavGenre() {
 }
 
 function loadMediaPlataforms() {
+  var lsMediaOutput = document.getElementById("lsMediaOutput");
+  var plataform = localStorage.getItem("midia");
+  lsMediaOutput.innerHTML = plataform;
+}
+
+function loadMediaPlataforms2() {
   const lsMediaOutput = document.getElementById("lsMediaOutput");
   const physical = localStorage.getItem("midia-fisica");
   const digital = localStorage.getItem("midia-digital");
@@ -175,22 +180,12 @@ function storeUserFav() {
 }
 
 function loadCboxPreferences() {
-  var physical = document.getElementById("midia-fisica");
-  var digital = document.getElementById("midia-digital");
-  var ilegal = document.getElementById("metodos-ilegais");
-  var misterio = document.getElementById("maneiras-misteriosas");
-
-  if (localStorage.getItem(physical.id)) {
-    physical.checked = true;
-  }
-  if (localStorage.getItem(digital.id)) {
-    digital.checked = true;
-  }
-  if (localStorage.getItem(ilegal.id)) {
-    ilegal.checked = true;
-  }
-  if (localStorage.getItem(misterio.id)) {
-    misterio.checked = true;
+  var checkbox = document.getElementById("checkbox");
+  var choice = localStorage.getItem("midia");
+  if (choice) {
+    // muitíssimo obrigado ao stackoverflow, isso também
+    // não queria ir de jeito nenhummmmsadpfasijfiop
+    $("select[name=checkbox]").val(choice);
   }
 }
 
@@ -251,53 +246,11 @@ function loadRadio() {
     defautl:
     break;
   }
-
 }
 
-
-function storeCheckbox() {
-  // Antes de mais nada, eu sinto muito de verdade pelo brute-force
-  // mas eu não consegui fazer funcionar de nenhum outro jeito
-  // se não foi por bem, foi por mal mesmo
-  var physical = document.getElementById("midia-fisica");
-  var digital = document.getElementById("midia-digital");
-  var ilegal = document.getElementById("metodos-ilegais");
-  var misterio = document.getElementById("maneiras-misteriosas");
-  // os outros tão ficando salvos
-  //todo: limpar histórico do navegador pra ver se resolve
-  // se não resolver, fazer o else pra apagar na marra
-
-  if (physical.checked) {
-    localStorage.setItem(physical.id,physical.value);
-  } else {
-    localStorage.removeItem(physical.id);
-  }
-
-  if (digital.checked) {
-    localStorage.setItem(digital.id,digital.value);
-  } else {
-    localStorage.removeItem(digital.id);
-  }
-
-  if (ilegal.checked) {
-    localStorage.setItem(ilegal.id,ilegal.value);
-  } else {
-    localStorage.removeItem(ilegal.id);
-  }
-
-  if (misterio.checked) {
-    localStorage.setItem(misterio.id,misterio.value);
-  } else {
-    localStorage.removeItem(misterio.id);
-  }
-
-}
-
-function clearCheckbox() {
-  localStorage.removeItem("midia-fisica");
-  localStorage.removeItem("midia-digital");
-  localStorage.removeItem("metodos-ilegais");
-  localStorage.removeItem("maneiras-misteriosas");
+function storeCheckbox (selection) {
+  var choice = selection.options[selection.selectedIndex];
+  localStorage.setItem(choice.id, choice.value);
 }
 
 function clearFields() {
